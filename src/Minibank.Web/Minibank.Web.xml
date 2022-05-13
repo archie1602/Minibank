@@ -1,0 +1,99 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Minibank.Web</name>
+    </assembly>
+    <members>
+        <member name="M:Minibank.Web.Controllers.BankAccounts.BankAccountController.GetAllAsync(System.Threading.CancellationToken)">
+            <summary>
+            Get all bank accounts
+            </summary>
+            <returns>bank accounts</returns>
+        </member>
+        <member name="M:Minibank.Web.Controllers.BankAccounts.BankAccountController.Get(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Get bank account with the specified id
+            </summary>
+            <param name="id">bank account id</param>
+            <returns>bank account</returns>
+        </member>
+        <member name="M:Minibank.Web.Controllers.BankAccounts.BankAccountController.CreateAsync(Minibank.Web.Controllers.BankAccounts.Dto.BankAccountCreateDto,System.Threading.CancellationToken)">
+            <summary>
+            Creates a bank account for the specified user
+            </summary>
+            <param name="accountDto">account dto: user id, bank account currency type</param>
+        </member>
+        <member name="M:Minibank.Web.Controllers.BankAccounts.BankAccountController.CloseAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Closes the specified user's bank account
+            </summary>
+            <param name="id">id</param>
+        </member>
+        <member name="M:Minibank.Web.Controllers.BankAccounts.BankAccountController.CalculateTransferFeesAsync(System.Int32,System.Int32,System.Decimal,System.Threading.CancellationToken)">
+            <summary>
+            Calculates the commission when transferring between two bank accounts
+            </summary>
+            <param name="amount">amount of money</param>
+            <param name="fromAccountId">source bank account id</param>
+            <param name="toAccountId">destination bank account id</param>
+            <returns>transfer commission</returns>
+        </member>
+        <member name="M:Minibank.Web.Controllers.BankAccounts.BankAccountController.TransferAsync(Minibank.Web.Controllers.BankAccounts.Dto.BankAccountTransferInfoDto,System.Threading.CancellationToken)">
+            <summary>
+            Transfers money from one bank account to another
+            </summary>
+            <param name="transferInfo">transfer info: amount of money, source bank account id, destination bank account id</param>
+            <returns></returns>
+        </member>
+        <member name="M:Minibank.Web.Controllers.TransferHistorys.TransferHistoryController.GetAllAsync(System.Threading.CancellationToken)">
+            <summary>
+            Get all transfer history
+            </summary>
+            <returns>all transfer history</returns>
+        </member>
+        <member name="M:Minibank.Web.Controllers.Users.UserController.GetAllAsync(System.Threading.CancellationToken)">
+            <summary>
+            Get all users
+            </summary>
+            <returns>users</returns>
+        </member>
+        <member name="M:Minibank.Web.Controllers.Users.UserController.GetAllUserAccountsAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Get all bank accounts of the specified user
+            </summary>
+            <param name="userId">user id</param>
+            <returns>all user bank accounts</returns>
+        </member>
+        <member name="M:Minibank.Web.Controllers.Users.UserController.GetAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Get user with the specified id
+            </summary>
+            <param name="id">user id</param>
+            <returns>user</returns>
+        </member>
+        <member name="M:Minibank.Web.Controllers.Users.UserController.CreateAsync(Minibank.Web.Controllers.Users.Dto.UserCreateDto,System.Threading.CancellationToken)">
+            <summary>
+            Creates a user
+            </summary>
+            <param name="userDto">user info</param>
+        </member>
+        <member name="M:Minibank.Web.Controllers.Users.UserController.UpdateAsync(System.Int32,Minibank.Web.Controllers.Users.Dto.UserUpdateDto,System.Threading.CancellationToken)">
+            <summary>
+            Updates the information of the specified user
+            </summary>
+            <param name="id">user id</param>
+            <param name="userDto">user info</param>
+        </member>
+        <member name="M:Minibank.Web.Controllers.Users.UserController.DeleteAsync(System.Int32,System.Threading.CancellationToken)">
+            <summary>
+            Deletes a user with the specified id
+            </summary>
+            <param name="id">user id</param>
+        </member>
+        <member name="T:Minibank.Web.HostedServices.MigrationHostedService">
+            <summary>
+            For automatic migration
+            </summary>
+        </member>
+    </members>
+</doc>

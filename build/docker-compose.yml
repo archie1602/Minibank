@@ -1,0 +1,20 @@
+version: '3.8'
+services:
+  postgre-sql-server:
+    image: postgres:latest
+    environment:
+      POSTGRES_USER: minibank-postgres-user
+      POSTGRES_PASSWORD: qwerty12345
+    ports:
+      - "1602:5432"
+
+  minibank-api:
+    build:
+      context: ..
+      dockerfile: ./build/Minibank.Dockerfile
+    environment:
+      ConnectionStrings__DefaultConnection: Host=postgre-sql-server;Port=5432;Database=minibank-demo;Username=minibank-postgres-user;Password=qwerty12345
+    ports:
+      - "2109:5000"
+    depends_on:
+      - postgre-sql-server
